@@ -78,7 +78,7 @@ Bağlantılar:
 
 ## Ana Fazlar
 
-- [ ] Faz 0 - Keşif, kapsam, kararlar ve proje hazırlığı
+- [x] Faz 0 - Keşif, kapsam, kararlar ve proje hazırlığı
 - [ ] Faz 1 - Marka dili, tasarım sistemi ve animasyon yönü
 - [ ] Faz 2 - Teknik altyapı, uygulama iskeleti ve geliştirme düzeni
 - [ ] Faz 3 - Veri modeli, kimlik doğrulama ve temel admin girişi

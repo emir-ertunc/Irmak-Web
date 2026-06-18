@@ -17,7 +17,7 @@ Bağlantılar:
 - [x] `git status` ile değişiklikler kontrol edildi.
 - [x] Gerekli dosyalar stage edildi.
 - [x] Açıklayıcı commit mesajı ile commit alınacak.
-- [ ] Çalışılan branch GitHub'a push edilecek.
+- [x] Çalışılan branch GitHub'a push edilecek.
 
 Commit notu:
 
@@ -25,7 +25,7 @@ Commit notu:
 
 Push notu:
 
-- [ ] Depoda henüz GitHub remote adresi tanımlı olmadığı için push adımı remote eklendikten sonra tamamlanacaktır.
+- [x] GitHub remote adresi tanımlandı ve `master` branch'i GitHub'a push edildi.
 
 ## Faz 0 Çıktıları
 
@@ -49,7 +49,7 @@ Push notu:
 - [x] Git durumu kontrol edilecek.
 - [x] Doküman değişiklikleri stage edilecek.
 - [x] Faz 0 commit'i alınacak.
-- [ ] GitHub remote tanımlanınca branch push edilecek.
+- [x] GitHub remote tanımlanınca branch push edilecek.
 
 ## Sonraki Faz
 

@@ -54,7 +54,7 @@ Bağlantılar:
 - [x] `git status` ile değişiklikler kontrol edilir.
 - [x] Gerekli dosyalar stage edilir.
 - [x] Açıklayıcı commit mesajı ile commit alınır.
-- [ ] Çalışılan branch GitHub'a push edilir.
+- [x] Çalışılan branch GitHub'a push edilir.
 
 ## Faz 1 - Marka Dili, Tasarım Sistemi ve Animasyon Yönü
 
