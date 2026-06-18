@@ -56,4 +56,4 @@ Push notu:
 - [x] Faz 1.1 Marka Temeli ile devam edildi.
 - [x] Faz 1.2 Arayüz Haritası ile devam edildi.
 - [x] Faz 1.3 Animasyon İlkeleri ile devam edildi.
-- [ ] Faz 1.4 Faz Kapanışı ve GitHub ile devam edilecek.
+- [x] Faz 1.4 Faz Kapanışı ve GitHub ile devam edildi.
