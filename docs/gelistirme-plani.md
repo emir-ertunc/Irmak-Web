@@ -60,42 +60,50 @@ Bağlantılar:
 
 ### 1.1 Marka Temeli
 
-- [ ] Site adı, kısa açıklama ve ana sayfa tonu belirlenir.
-- [ ] Pembe ana renk ailesi ve destek renkleri seçilir.
-- [ ] Çiçekli, cıvıl cıvıl, tatlı ve neşeli feminen atmosfer için moodboard kararları yazılır.
-- [ ] Çiçek, kalp, parıltı, kurdele, sticker ve el yapımı hissi veren dekoratif motif listesi belirlenir.
-- [ ] Yazı tipi, başlık ölçekleri ve metin ağırlıkları belirlenir.
-- [ ] Buton, form, kart, rozet ve bildirim stilleri tasarlanır.
-- [ ] Canlı ama tek renge sıkışmayan renk dengesi için pembe dışı destek renklerin kullanım yerleri belirlenir.
-- [ ] Ürün fotoğrafı kullanım kuralları belirlenir.
+Çıktı: [Faz 1.1 Marka Temeli](faz-1-1-marka-temeli.md)
+
+- [x] Site adı, kısa açıklama ve ana sayfa tonu belirlenir.
+- [x] Pembe ana renk ailesi ve destek renkleri seçilir.
+- [x] Çiçekli, cıvıl cıvıl, tatlı ve neşeli feminen atmosfer için moodboard kararları yazılır.
+- [x] Çiçek, kalp, parıltı, kurdele, sticker ve el yapımı hissi veren dekoratif motif listesi belirlenir.
+- [x] Yazı tipi, başlık ölçekleri ve metin ağırlıkları belirlenir.
+- [x] Buton, form, kart, rozet ve bildirim stilleri tasarlanır.
+- [x] Canlı ama tek renge sıkışmayan renk dengesi için pembe dışı destek renklerin kullanım yerleri belirlenir.
+- [x] Ürün fotoğrafı kullanım kuralları belirlenir.
 
 ### 1.2 Arayüz Haritası
 
-- [ ] Müşteri tarafı sayfa haritası çıkarılır.
-- [ ] Admin paneli sayfa haritası çıkarılır.
-- [ ] Mobil, tablet ve masaüstü kırılım noktaları belirlenir.
-- [ ] Ana navigasyon, kategori menüsü ve alt navigasyon planlanır.
-- [ ] Boş durum, yükleniyor durumu ve hata durumu tasarlanır.
+Çıktı: [Faz 1.2 Arayüz Haritası](faz-1-2-arayuz-haritasi.md)
+
+- [x] Müşteri tarafı sayfa haritası çıkarılır.
+- [x] Admin paneli sayfa haritası çıkarılır.
+- [x] Mobil, tablet ve masaüstü kırılım noktaları belirlenir.
+- [x] Ana navigasyon, kategori menüsü ve alt navigasyon planlanır.
+- [x] Boş durum, yükleniyor durumu ve hata durumu tasarlanır.
 
 ### 1.3 Animasyon İlkeleri
 
-- [ ] Ana sayfa giriş animasyonu planlanır.
-- [ ] Ürün kartı hover ve dokunma animasyonları planlanır.
-- [ ] Sepete ekleme ve favoriye alma mikro etkileşimleri planlanır.
-- [ ] Çiçek süzülmesi, parıltı patlaması, yumuşak sticker zıplaması ve koleksiyon geçişleri için animasyon listesi hazırlanır.
-- [ ] Hangi animasyonların sadece masaüstünde, hangilerinin mobilde de çalışacağı belirlenir.
-- [ ] Animasyon süreleri, gecikmeleri ve tekrar sınırları için performans bütçesi belirlenir.
-- [ ] Ağır görsel efektlerden kaçınmak için transform ve opacity temelli hareket standardı yazılır.
-- [ ] Admin panelinde sade ve dikkat dağıtmayan geçişler belirlenir.
-- [ ] Hareket azaltma tercihi için alternatif davranış tanımlanır.
+Çıktı: [Faz 1.3 Animasyon İlkeleri](faz-1-3-animasyon-ilkeleri.md)
+
+- [x] Ana sayfa giriş animasyonu planlanır.
+- [x] Ürün kartı hover ve dokunma animasyonları planlanır.
+- [x] Sepete ekleme ve favoriye alma mikro etkileşimleri planlanır.
+- [x] Çiçek süzülmesi, parıltı patlaması, yumuşak sticker zıplaması ve koleksiyon geçişleri için animasyon listesi hazırlanır.
+- [x] Hangi animasyonların sadece masaüstünde, hangilerinin mobilde de çalışacağı belirlenir.
+- [x] Animasyon süreleri, gecikmeleri ve tekrar sınırları için performans bütçesi belirlenir.
+- [x] Ağır görsel efektlerden kaçınmak için transform ve opacity temelli hareket standardı yazılır.
+- [x] Admin panelinde sade ve dikkat dağıtmayan geçişler belirlenir.
+- [x] Hareket azaltma tercihi için alternatif davranış tanımlanır.
 
 ### 1.4 Faz Kapanışı ve GitHub
 
-- [ ] Tasarım kararları dokümana eklenir.
-- [ ] Gerekirse statik tasarım notları veya örnek ekranlar eklenir.
-- [ ] Kontrol komutları çalıştırılır.
-- [ ] Commit alınır.
-- [ ] Branch GitHub'a push edilir.
+Çıktı: [Faz 1.4 Faz Kapanışı ve GitHub](faz-1-4-faz-kapanisi-github.md)
+
+- [x] Tasarım kararları dokümana eklenir.
+- [x] Gerekirse statik tasarım notları veya örnek ekranlar eklenir.
+- [x] Kontrol komutları çalıştırılır.
+- [x] Commit alınır.
+- [x] Branch GitHub'a push edilir.
 
 ## Faz 2 - Teknik Altyapı ve Uygulama İskeleti
 

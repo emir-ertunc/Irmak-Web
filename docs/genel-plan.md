@@ -10,6 +10,10 @@ Bağlantılar:
 - [Faz 0.2 Rakip ve İlham Analizi](faz-0-2-rakip-ilham-analizi.md)
 - [Faz 0.3 Proje Yapısı Kararı](faz-0-3-proje-yapisi-karari.md)
 - [Faz 0.4 Faz Kapanışı ve GitHub](faz-0-4-faz-kapanisi-github.md)
+- [Faz 1.1 Marka Temeli](faz-1-1-marka-temeli.md)
+- [Faz 1.2 Arayüz Haritası](faz-1-2-arayuz-haritasi.md)
+- [Faz 1.3 Animasyon İlkeleri](faz-1-3-animasyon-ilkeleri.md)
+- [Faz 1.4 Faz Kapanışı ve GitHub](faz-1-4-faz-kapanisi-github.md)
 
 ## Proje Hedefi
 
@@ -29,6 +33,10 @@ Bağlantılar:
 - [ ] Görsel ilham ve rakip analizi [Faz 0.2 Rakip ve İlham Analizi](faz-0-2-rakip-ilham-analizi.md) dosyasında takip edilir.
 - [ ] Teknik yapı ve rota kararları [Faz 0.3 Proje Yapısı Kararı](faz-0-3-proje-yapisi-karari.md) dosyasında takip edilir.
 - [ ] Faz 0 kapanış durumu [Faz 0.4 Faz Kapanışı ve GitHub](faz-0-4-faz-kapanisi-github.md) dosyasında takip edilir.
+- [ ] Marka temeli [Faz 1.1 Marka Temeli](faz-1-1-marka-temeli.md) dosyasında takip edilir.
+- [ ] Arayüz haritası [Faz 1.2 Arayüz Haritası](faz-1-2-arayuz-haritasi.md) dosyasında takip edilir.
+- [ ] Animasyon ilkeleri [Faz 1.3 Animasyon İlkeleri](faz-1-3-animasyon-ilkeleri.md) dosyasında takip edilir.
+- [ ] Faz 1 kapanış durumu [Faz 1.4 Faz Kapanışı ve GitHub](faz-1-4-faz-kapanisi-github.md) dosyasında takip edilir.
 
 ## Kullanıcı Deneyimi Yönü
 
@@ -50,6 +58,7 @@ Bağlantılar:
 
 ## Görsel ve Marka Dili
 
+- [x] Çalışma marka adı Irmak'ın Minik Atölyesi olarak belirlendi.
 - [ ] Ana renk ailesi pembe olacak, ancak tüm arayüz tek renge sıkışmayacaktır.
 - [ ] Destek renkleri olarak mercan, yumuşak sarı, açık yeşil, beyaz ve koyu metin tonları dengeli kullanılacaktır.
 - [ ] Çiçek motifleri, yumuşak desenler, neşeli ikonlar ve küçük parıltı detayları marka dilinin ana parçaları olacaktır.
@@ -79,7 +88,7 @@ Bağlantılar:
 ## Ana Fazlar
 
 - [x] Faz 0 - Keşif, kapsam, kararlar ve proje hazırlığı
-- [ ] Faz 1 - Marka dili, tasarım sistemi ve animasyon yönü
+- [x] Faz 1 - Marka dili, tasarım sistemi ve animasyon yönü
 - [ ] Faz 2 - Teknik altyapı, uygulama iskeleti ve geliştirme düzeni
 - [ ] Faz 3 - Veri modeli, kimlik doğrulama ve temel admin girişi
 - [ ] Faz 4 - Ürün kataloğu ve vitrin sayfaları

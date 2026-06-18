@@ -179,4 +179,4 @@ Aşağıdaki kararlar bu alt aşamayı engellemez; sonraki fazlarda netleştiril
 
 - [x] Faz 0.2'de pembe, çiçekli, cıvıl cıvıl ve animasyonlu sitelerden ilham örnekleri toplandı.
 - [x] Faz 0.3'te seçilen teknik yapı, ürün varyantlarını ve sipariş talebi akışını rahat taşıyacak şekilde planlandı.
-- [ ] Faz 1.1'de ürünlerin el yapımı ve neşeli havasını taşıyan marka dili netleştirilmelidir.
+- [x] Faz 1.1'de ürünlerin el yapımı ve neşeli havasını taşıyan marka dili netleştirildi.

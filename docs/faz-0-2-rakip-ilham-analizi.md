@@ -104,10 +104,10 @@ Site, pembe ve çiçekli bir el işi dünyası gibi hissettirmeli; tatlı, harek
 
 ## Faz 1 İçin Tasarım Notları
 
-- [ ] Moodboard pembe, çiçekli, tatlı ve parıltılı örneklerden kurulmalıdır.
-- [ ] Tasarım sistemi kart, rozet, buton ve form alanlarında bu tonu aynı anda hem canlı hem okunabilir taşımalıdır.
-- [ ] Animasyon sistemi mikro hareketleri standartlaştırmalıdır: giriş, hover, favori, sepete ekleme, başarı ve hata.
-- [ ] Ürün fotoğrafı standartları yakın çekim, ölçek gösterimi, kullanım bağlamı ve paketleme görselini kapsamalıdır.
+- [x] Moodboard pembe, çiçekli, tatlı ve parıltılı örneklerden kurulmalıdır.
+- [x] Tasarım sistemi kart, rozet, buton ve form alanlarında bu tonu aynı anda hem canlı hem okunabilir taşımalıdır.
+- [x] Animasyon sistemi mikro hareketleri standartlaştırmalıdır: giriş, hover, favori, sepete ekleme, başarı ve hata.
+- [x] Ürün fotoğrafı standartları yakın çekim, ölçek gösterimi, kullanım bağlamı ve paketleme görselini kapsamalıdır.
 
 ## Faz 3 ve Sonrası İçin Ürün Verisi Notları
 
@@ -115,4 +115,3 @@ Site, pembe ve çiçekli bir el işi dünyası gibi hissettirmeli; tatlı, harek
 - [ ] Varyant modeli fiyat ve stok farkını taşıyabilmelidir.
 - [ ] Özel sipariş modeli referans görsel, açıklama, ön onay ve tahmini fiyat aralığı alanlarını desteklemelidir.
 - [ ] Sipariş talebi modeli ödeme durumu yerine talep durumu mantığıyla tasarlanmalıdır.
-

@@ -53,5 +53,7 @@ Push notu:
 
 ## Sonraki Faz
 
-- [ ] Faz 1.1 Marka Temeli ile devam edilecek.
-- [ ] Faz 1'de site adı, ana marka tonu, renk sistemi, çiçekli/parıltılı motifler ve temel UI dili netleştirilecek.
+- [x] Faz 1.1 Marka Temeli ile devam edildi.
+- [x] Faz 1.2 Arayüz Haritası ile devam edildi.
+- [x] Faz 1.3 Animasyon İlkeleri ile devam edildi.
+- [ ] Faz 1.4 Faz Kapanışı ve GitHub ile devam edilecek.
