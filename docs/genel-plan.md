@@ -18,6 +18,10 @@ Bağlantılar:
 - [Faz 2.2 Temel Rotalar](faz-2-2-temel-rotalar.md)
 - [Faz 2.3 Ortak Bileşenler](faz-2-3-ortak-bilesenler.md)
 - [Faz 2.4 Faz Kapanışı ve GitHub](faz-2-4-faz-kapanisi-github.md)
+- [Faz 3.1 Veri Modeli](faz-3-1-veri-modeli.md)
+- [Faz 3.2 Veri Katmanı](faz-3-2-veri-katmani.md)
+- [Faz 3.3 Admin Girişi](faz-3-3-admin-girisi.md)
+- [Faz 3.4 Faz Kapanışı ve GitHub](faz-3-4-faz-kapanisi-github.md)
 
 ## Proje Hedefi
 
@@ -45,6 +49,10 @@ Bağlantılar:
 - [x] Temel rotalar [Faz 2.2 Temel Rotalar](faz-2-2-temel-rotalar.md) dosyasında takip edilir.
 - [x] Ortak bileşenler [Faz 2.3 Ortak Bileşenler](faz-2-3-ortak-bilesenler.md) dosyasında takip edilir.
 - [x] Faz 2 kapanış durumu [Faz 2.4 Faz Kapanışı ve GitHub](faz-2-4-faz-kapanisi-github.md) dosyasında takip edilir.
+- [x] Veri modeli [Faz 3.1 Veri Modeli](faz-3-1-veri-modeli.md) dosyasında takip edilir.
+- [x] Veri katmanı [Faz 3.2 Veri Katmanı](faz-3-2-veri-katmani.md) dosyasında takip edilir.
+- [x] Admin girişi [Faz 3.3 Admin Girişi](faz-3-3-admin-girisi.md) dosyasında takip edilir.
+- [x] Faz 3 kapanış durumu [Faz 3.4 Faz Kapanışı ve GitHub](faz-3-4-faz-kapanisi-github.md) dosyasında takip edilir.
 
 ## Kullanıcı Deneyimi Yönü
 
@@ -98,7 +106,7 @@ Bağlantılar:
 - [x] Faz 0 - Keşif, kapsam, kararlar ve proje hazırlığı
 - [x] Faz 1 - Marka dili, tasarım sistemi ve animasyon yönü
 - [x] Faz 2 - Teknik altyapı, uygulama iskeleti ve geliştirme düzeni
-- [ ] Faz 3 - Veri modeli, kimlik doğrulama ve temel admin girişi
+- [x] Faz 3 - Veri modeli, kimlik doğrulama ve temel admin girişi
 - [ ] Faz 4 - Ürün kataloğu ve vitrin sayfaları
 - [ ] Faz 5 - Ürün detayı, sepet, favoriler ve kişiselleştirme akışları
 - [ ] Faz 6 - Sipariş, ödeme hazırlığı, kargo ve müşteri iletişimi

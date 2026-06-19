@@ -52,5 +52,5 @@ Bağlantılar:
 
 ## Sonraki Faz
 
-- [ ] Faz 3.1 Veri Modeli ile devam edilecek.
-- [ ] Faz 3'te ürün, kategori, koleksiyon, görsel, varyant, sipariş ve admin kullanıcı modelleri hazırlanacak.
+- [x] Faz 3.1 Veri Modeli ile devam edildi.
+- [x] Faz 3'te ürün, kategori, koleksiyon, görsel, varyant, sipariş ve admin kullanıcı modelleri hazırlandı.

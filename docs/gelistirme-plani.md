@@ -153,35 +153,43 @@ Bağlantılar:
 
 ### 3.1 Veri Modeli
 
-- [ ] Ürün modeli hazırlanır.
-- [ ] Kategori ve koleksiyon modeli hazırlanır.
-- [ ] Ürün görseli ve varyant modeli hazırlanır.
-- [ ] Sipariş, sipariş kalemi ve müşteri bilgisi modeli hazırlanır.
-- [ ] Admin kullanıcı ve rol yapısı hazırlanır.
+Çıktı: [Faz 3.1 Veri Modeli](faz-3-1-veri-modeli.md)
+
+- [x] Ürün modeli hazırlanır.
+- [x] Kategori ve koleksiyon modeli hazırlanır.
+- [x] Ürün görseli ve varyant modeli hazırlanır.
+- [x] Sipariş, sipariş kalemi ve müşteri bilgisi modeli hazırlanır.
+- [x] Admin kullanıcı ve rol yapısı hazırlanır.
 
 ### 3.2 Veri Katmanı
 
-- [ ] Veritabanı bağlantısı yapılandırılır.
-- [ ] Migration veya şema yönetimi düzenlenir.
-- [ ] Örnek geliştirme verileri hazırlanır.
-- [ ] Ürün listeleme ve detay okuma servisleri eklenir.
-- [ ] Hata yakalama ve loglama yaklaşımı belirlenir.
+Çıktı: [Faz 3.2 Veri Katmanı](faz-3-2-veri-katmani.md)
+
+- [x] Veritabanı bağlantısı yapılandırılır.
+- [x] Migration veya şema yönetimi düzenlenir.
+- [x] Örnek geliştirme verileri hazırlanır.
+- [x] Ürün listeleme ve detay okuma servisleri eklenir.
+- [x] Hata yakalama ve loglama yaklaşımı belirlenir.
 
 ### 3.3 Admin Girişi
 
-- [ ] Admin giriş ekranı yapılır.
-- [ ] Oturum açma ve oturum kapatma akışı eklenir.
-- [ ] Admin rotaları koruma altına alınır.
-- [ ] Yetkisiz erişim ekranı veya yönlendirmesi eklenir.
-- [ ] Temel güvenlik kontrolleri yapılır.
+Çıktı: [Faz 3.3 Admin Girişi](faz-3-3-admin-girisi.md)
+
+- [x] Admin giriş ekranı yapılır.
+- [x] Oturum açma ve oturum kapatma akışı eklenir.
+- [x] Admin rotaları koruma altına alınır.
+- [x] Yetkisiz erişim ekranı veya yönlendirmesi eklenir.
+- [x] Temel güvenlik kontrolleri yapılır.
 
 ### 3.4 Faz Kapanışı ve GitHub
 
-- [ ] Migration veya şema çıktıları kontrol edilir.
-- [ ] Admin giriş akışı yerelde test edilir.
-- [ ] Gerekli doküman ve örnek ayarlar güncellenir.
-- [ ] Commit alınır.
-- [ ] Branch GitHub'a push edilir.
+Çıktı: [Faz 3.4 Faz Kapanışı ve GitHub](faz-3-4-faz-kapanisi-github.md)
+
+- [x] Migration veya şema çıktıları kontrol edilir.
+- [x] Admin giriş akışı yerelde test edilir.
+- [x] Gerekli doküman ve örnek ayarlar güncellenir.
+- [x] Commit alınır.
+- [x] Branch GitHub'a push edilir.
 
 ## Faz 4 - Ürün Kataloğu ve Vitrin Sayfaları
 
