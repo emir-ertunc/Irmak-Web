@@ -109,37 +109,45 @@ Bağlantılar:
 
 ### 2.1 Proje Kurulumu
 
-- [ ] Uygulama iskeleti oluşturulur.
-- [ ] Paket yöneticisi ve scriptler düzenlenir.
-- [ ] Lint, format ve temel kalite komutları eklenir.
-- [ ] Ortam değişkenleri için örnek dosya hazırlanır.
-- [ ] Klasör yapısı müşteri tarafı, admin tarafı, ortak bileşenler ve veri katmanı olarak ayrılır.
+Çıktı: [Faz 2.1 Proje Kurulumu](faz-2-1-proje-kurulumu.md)
+
+- [x] Uygulama iskeleti oluşturulur.
+- [x] Paket yöneticisi ve scriptler düzenlenir.
+- [x] Lint, format ve temel kalite komutları eklenir.
+- [x] Ortam değişkenleri için örnek dosya hazırlanır.
+- [x] Klasör yapısı müşteri tarafı, admin tarafı, ortak bileşenler ve veri katmanı olarak ayrılır.
 
 ### 2.2 Temel Rotalar
 
-- [ ] Ana sayfa rotası oluşturulur.
-- [ ] Katalog rotası oluşturulur.
-- [ ] Ürün detay rotası oluşturulur.
-- [ ] Sepet rotası oluşturulur.
-- [ ] Admin giriş ve admin ana panel rotaları oluşturulur.
+Çıktı: [Faz 2.2 Temel Rotalar](faz-2-2-temel-rotalar.md)
+
+- [x] Ana sayfa rotası oluşturulur.
+- [x] Katalog rotası oluşturulur.
+- [x] Ürün detay rotası oluşturulur.
+- [x] Sepet rotası oluşturulur.
+- [x] Admin giriş ve admin ana panel rotaları oluşturulur.
 
 ### 2.3 Ortak Bileşenler
 
-- [ ] Layout, header, footer ve mobil menü bileşenleri eklenir.
-- [ ] Button, input, select, modal, card ve badge bileşenleri hazırlanır.
-- [ ] Toast veya bildirim sistemi eklenir.
-- [ ] Tema renkleri ve tasarım tokenları merkezi hale getirilir.
-- [ ] Animasyon süreleri, easing değerleri, zıplama, süzülme ve giriş geçişleri için merkezi hareket tokenları eklenir.
-- [ ] Çiçekli dekor, parıltı ve sticker benzeri tekrar kullanılabilir görsel bileşenler hazırlanır.
-- [ ] Erişilebilir odak stilleri eklenir.
+Çıktı: [Faz 2.3 Ortak Bileşenler](faz-2-3-ortak-bilesenler.md)
+
+- [x] Layout, header, footer ve mobil menü bileşenleri eklenir.
+- [x] Button, input, select, modal, card ve badge bileşenleri hazırlanır.
+- [x] Toast veya bildirim sistemi eklenir.
+- [x] Tema renkleri ve tasarım tokenları merkezi hale getirilir.
+- [x] Animasyon süreleri, easing değerleri, zıplama, süzülme ve giriş geçişleri için merkezi hareket tokenları eklenir.
+- [x] Çiçekli dekor, parıltı ve sticker benzeri tekrar kullanılabilir görsel bileşenler hazırlanır.
+- [x] Erişilebilir odak stilleri eklenir.
 
 ### 2.4 Faz Kapanışı ve GitHub
 
-- [ ] Lint ve build komutları çalıştırılır.
-- [ ] Temel rotalar tarayıcıda kontrol edilir.
-- [ ] Proje kurulum notları güncellenir.
-- [ ] Commit alınır.
-- [ ] Branch GitHub'a push edilir.
+Çıktı: [Faz 2.4 Faz Kapanışı ve GitHub](faz-2-4-faz-kapanisi-github.md)
+
+- [x] Lint ve build komutları çalıştırılır.
+- [x] Temel rotalar tarayıcıda kontrol edilir.
+- [x] Proje kurulum notları güncellenir.
+- [x] Commit alınır.
+- [x] Branch GitHub'a push edilir.
 
 ## Faz 3 - Veri Modeli, Kimlik Doğrulama ve Temel Admin Girişi
 

@@ -47,6 +47,6 @@ Bağlantılar:
 
 ## Sonraki Faz
 
-- [ ] Faz 2.1 Proje Kurulumu ile devam edilecek.
-- [ ] Faz 2'de uygulama iskeleti, paket yöneticisi, lint/format, ortam örneği ve klasör yapısı kurulacak.
-
+- [x] Faz 2.1 Proje Kurulumu ile devam edildi.
+- [x] Faz 2'de uygulama iskeleti, paket yöneticisi, lint/format, ortam örneği ve klasör yapısı kuruldu.
+- [x] Faz 2.2 Temel Rotalar ile devam edildi.

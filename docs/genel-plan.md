@@ -14,6 +14,10 @@ Bağlantılar:
 - [Faz 1.2 Arayüz Haritası](faz-1-2-arayuz-haritasi.md)
 - [Faz 1.3 Animasyon İlkeleri](faz-1-3-animasyon-ilkeleri.md)
 - [Faz 1.4 Faz Kapanışı ve GitHub](faz-1-4-faz-kapanisi-github.md)
+- [Faz 2.1 Proje Kurulumu](faz-2-1-proje-kurulumu.md)
+- [Faz 2.2 Temel Rotalar](faz-2-2-temel-rotalar.md)
+- [Faz 2.3 Ortak Bileşenler](faz-2-3-ortak-bilesenler.md)
+- [Faz 2.4 Faz Kapanışı ve GitHub](faz-2-4-faz-kapanisi-github.md)
 
 ## Proje Hedefi
 
@@ -37,6 +41,10 @@ Bağlantılar:
 - [x] Arayüz haritası [Faz 1.2 Arayüz Haritası](faz-1-2-arayuz-haritasi.md) dosyasında takip edilir.
 - [x] Animasyon ilkeleri [Faz 1.3 Animasyon İlkeleri](faz-1-3-animasyon-ilkeleri.md) dosyasında takip edilir.
 - [x] Faz 1 kapanış durumu [Faz 1.4 Faz Kapanışı ve GitHub](faz-1-4-faz-kapanisi-github.md) dosyasında takip edilir.
+- [x] Proje kurulumu [Faz 2.1 Proje Kurulumu](faz-2-1-proje-kurulumu.md) dosyasında takip edilir.
+- [x] Temel rotalar [Faz 2.2 Temel Rotalar](faz-2-2-temel-rotalar.md) dosyasında takip edilir.
+- [x] Ortak bileşenler [Faz 2.3 Ortak Bileşenler](faz-2-3-ortak-bilesenler.md) dosyasında takip edilir.
+- [x] Faz 2 kapanış durumu [Faz 2.4 Faz Kapanışı ve GitHub](faz-2-4-faz-kapanisi-github.md) dosyasında takip edilir.
 
 ## Kullanıcı Deneyimi Yönü
 
@@ -89,7 +97,7 @@ Bağlantılar:
 
 - [x] Faz 0 - Keşif, kapsam, kararlar ve proje hazırlığı
 - [x] Faz 1 - Marka dili, tasarım sistemi ve animasyon yönü
-- [ ] Faz 2 - Teknik altyapı, uygulama iskeleti ve geliştirme düzeni
+- [x] Faz 2 - Teknik altyapı, uygulama iskeleti ve geliştirme düzeni
 - [ ] Faz 3 - Veri modeli, kimlik doğrulama ve temel admin girişi
 - [ ] Faz 4 - Ürün kataloğu ve vitrin sayfaları
 - [ ] Faz 5 - Ürün detayı, sepet, favoriler ve kişiselleştirme akışları
