@@ -180,6 +180,7 @@ function mapProduct(row: ProductRow): ProductDetail {
     (first, second) => first.sort_order - second.sort_order
   );
   const variants = [...row.product_variants]
+    .filter((variant) => variant.status === "published")
     .sort((first, second) => first.name.localeCompare(second.name, "tr"))
     .map(mapVariant);
   const mappedImages = images.map(mapImage);
@@ -216,6 +217,7 @@ export async function listPublishedProducts(): Promise<ProductListItem[]> {
     .from(tableNames.products)
     .select(productSelect)
     .eq("status", "published")
+    .eq("product_variants.status", "published")
     .order("featured", { ascending: false })
     .order("created_at", { ascending: false });
 
@@ -234,6 +236,7 @@ export async function getPublishedProductBySlug(
     .from(tableNames.products)
     .select(productSelect)
     .eq("status", "published")
+    .eq("product_variants.status", "published")
     .eq("slug", slug)
     .maybeSingle();
 

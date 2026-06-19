@@ -5,8 +5,9 @@ Bu klasör, veritabanı migration ve geliştirme seed dosyalarını tutar.
 ## Dosyalar
 
 - `migrations/202606190001_initial_data_model.sql`: Başlangıç veri modeli.
+- `migrations/202606190002_enable_rls_policies.sql`: RLS ve temel erişim politikaları.
 - `seed.sql`: Yerel geliştirme için örnek kategori, koleksiyon, ürün, görsel ve varyant kayıtları.
-- `policies/`: RLS politikaları Faz 3.3 ve 3.4 kapsamında eklenecek.
+- `policies/`: Ek veya daha özel policy dosyaları gerektiğinde burada tutulur.
 
 ## Çalıştırma Notları
 

@@ -54,6 +54,11 @@ Bağlantılar:
 - [x] Faz 3 kapanış commit'i alındı.
 - [x] `master` branch'i GitHub'a push edildi.
 
+## Kontrol Sonrası Düzeltmeler
+
+- [x] RLS ve temel erişim politikaları `202606190002_enable_rls_policies.sql` dosyasıyla eklendi.
+- [x] Ürün listeleme ve detay sorgularında yalnızca yayındaki varyantların dönmesi sağlandı.
+
 ## Sonraki Faz
 
 - [ ] Faz 4.1 Ana Sayfa ile devam edilecek.
