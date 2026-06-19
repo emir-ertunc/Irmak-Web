@@ -195,8 +195,10 @@ Bağlantılar:
 
 ### 4.1 Ana Sayfa
 
-- [ ] İlk ekran pembe, çiçekli, cıvıl cıvıl ve bol hareketli görsel düzenle uygulanır.
-- [ ] İlk ekranda performanslı çiçek süzülmesi veya neşeli dekoratif giriş hareketi eklenir.
+Çıktı: [Faz 4.1 Ana Sayfa](faz-4-1-ana-sayfa.md)
+
+- [x] İlk ekran pembe, çiçekli, cıvıl cıvıl ve bol hareketli görsel düzenle uygulanır.
+- [x] İlk ekranda performanslı çiçek süzülmesi veya neşeli dekoratif giriş hareketi eklenir.
 - [ ] Öne çıkan koleksiyon alanı eklenir.
 - [ ] Yeni ürünler alanı eklenir.
 - [ ] En sevilen ürünler veya önerilenler alanı eklenir.
