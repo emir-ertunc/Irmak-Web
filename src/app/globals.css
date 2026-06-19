@@ -169,6 +169,15 @@ body {
   animation-delay: 1200ms;
 }
 
+.home-collection-card {
+  transform: translate3d(0, 0, 0);
+}
+
+.home-collection-card:hover {
+  box-shadow: 0 18px 48px rgba(232, 93, 143, 0.14);
+  transform: translate3d(0, -4px, 0);
+}
+
 @media (max-width: 640px) {
   .home-craft-scene {
     min-height: 22rem;

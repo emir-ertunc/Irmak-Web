@@ -1,5 +1,13 @@
 import type { CSSProperties } from "react";
-import { Flower2, Heart, ShoppingBag, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Flower2,
+  Gift,
+  Heart,
+  ShoppingBag,
+  Sparkles
+} from "lucide-react";
+import Link from "next/link";
 import { ProductCard } from "@/components/shop/product-card";
 import { LinkButton } from "@/components/ui/button";
 import { previewProducts } from "@/lib/catalog/preview-products";
@@ -58,6 +66,36 @@ const petalLayer = [
     size: "size-9",
     x: "-12px",
     y: "-19px"
+  }
+];
+
+const featuredCollections = [
+  {
+    accent: "bg-[#FFD6E7] text-[#E85D8F]",
+    description: "Kalp, çiçek ve tatlı figür hissini taşıyan küpe taslakları.",
+    href: "/urunler",
+    icon: Heart,
+    meta: "Küpe seçkisi",
+    palette: "from-[#FFD6E7] via-[#FFF8F2] to-[#FFE66D]",
+    title: "Pembe Neşe Küpeleri"
+  },
+  {
+    accent: "bg-[#9BE7C0] text-[#3F1D2B]",
+    description: "Masa üstü, paket süsü ve minik hediye için canlı parçalar.",
+    href: "/urunler",
+    icon: Flower2,
+    meta: "Figür seçkisi",
+    palette: "from-[#9BE7C0] via-[#FFF8F2] to-[#FFD6E7]",
+    title: "Minik Figür Bahçesi"
+  },
+  {
+    accent: "bg-[#C7B8FF] text-[#3F1D2B]",
+    description: "Anahtarlık, kolye ucu ve hediye paketine yakışan detaylar.",
+    href: "/urunler",
+    icon: Gift,
+    meta: "Aksesuar seçkisi",
+    palette: "from-[#C7B8FF] via-[#FFF8F2] to-[#FF8A7A]",
+    title: "Tatlı Hediye Köşesi"
   }
 ];
 
@@ -134,6 +172,75 @@ function CraftPreview() {
   );
 }
 
+function FeaturedCollections() {
+  return (
+    <section className="px-6 py-14 sm:px-10 sm:py-16" id="koleksiyonlar">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-3 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F]">
+              <Sparkles aria-hidden="true" size={16} />
+              Öne çıkan koleksiyonlar
+            </p>
+            <h2 className="max-w-2xl text-3xl font-black leading-tight text-[#3F1D2B] sm:text-4xl">
+              Atölyenin en tatlı rafları tek bakışta
+            </h2>
+          </div>
+          <LinkButton
+            href="/urunler"
+            icon={<ArrowRight aria-hidden="true" size={17} />}
+            variant="secondary"
+          >
+            Tümünü Gör
+          </LinkButton>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {featuredCollections.map((collection) => {
+            const Icon = collection.icon;
+
+            return (
+              <Link
+                className="home-collection-card group overflow-hidden rounded-2xl border border-white/75 bg-white/70 shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#E85D8F]"
+                href={collection.href}
+                key={collection.title}
+              >
+                <div
+                  className={`relative min-h-44 bg-gradient-to-br ${collection.palette}`}
+                >
+                  <span className="absolute left-5 top-5 rounded-full bg-white/75 px-3 py-1 text-xs font-black text-[#5B3343] shadow-sm">
+                    {collection.meta}
+                  </span>
+                  <span
+                    className={[
+                      "absolute bottom-5 right-5 grid size-16 place-items-center rounded-full shadow-lg transition group-hover:-translate-y-1 group-hover:rotate-6",
+                      collection.accent
+                    ].join(" ")}
+                  >
+                    <Icon aria-hidden="true" size={28} />
+                  </span>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-xl font-black text-[#3F1D2B]">
+                    {collection.title}
+                  </h3>
+                  <p className="mt-2 min-h-12 text-sm leading-6 text-[#5B3343]">
+                    {collection.description}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F] transition group-hover:translate-x-1">
+                    Koleksiyona Bak
+                    <ArrowRight aria-hidden="true" size={16} />
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
@@ -184,6 +291,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+      <FeaturedCollections />
     </main>
   );
 }

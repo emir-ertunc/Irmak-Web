@@ -14,7 +14,7 @@ Bağlantılar:
 
 - [x] İlk ekran pembe, çiçekli, cıvıl cıvıl ve bol hareketli görsel düzenle uygulandı.
 - [x] İlk ekranda performanslı çiçek süzülmesi ve dekoratif giriş hareketi eklendi.
-- [ ] Öne çıkan koleksiyon alanı sonraki ana sayfa adımında ele alınacak.
+- [x] Öne çıkan koleksiyon alanı eklendi.
 - [ ] Yeni ürünler alanı sonraki ana sayfa adımında ele alınacak.
 - [ ] En sevilen ürünler veya önerilenler alanı sonraki ana sayfa adımında ele alınacak.
 - [ ] El yapımı hissini anlatan kısa içerik alanı sonraki ana sayfa adımında ele alınacak.
@@ -29,6 +29,8 @@ Bağlantılar:
 - [x] Giriş animasyonları metin, görsel önizleme ve ürün şeridi için ayrı katmanlara ayrıldı.
 - [x] İlk ekranda ürün kartlarından bir kısmı görünür bırakılarak vitrine geçiş hissi korundu.
 - [x] Görsel önizleme alanında figür, küpe ve hediye hissini veren neşeli parçalar kullanıldı.
+- [x] Öne çıkan koleksiyon alanı üç canlı koleksiyon bağlantısıyla eklendi.
+- [x] Koleksiyon kartları katalog rotasına yönlenecek şekilde hazırlandı.
 - [x] Hareket azaltma tercihi mevcut global kuralla desteklenmeye devam eder.
 
 ## Değişen Dosyalar
@@ -36,6 +38,7 @@ Bağlantılar:
 - [x] `src/app/(shop)/page.tsx`
 - [x] `src/app/globals.css`
 - [x] `docs/gelistirme-plani.md`
+- [x] `docs/faz-4-1-ana-sayfa.md`
 
 ## Kontroller
 
@@ -47,7 +50,7 @@ Bağlantılar:
 
 ## Faz 4.1 Sonraki Adımlar
 
-- [ ] Öne çıkan koleksiyon alanı eklenecek.
+- [x] Öne çıkan koleksiyon alanı eklendi.
 - [ ] Yeni ürünler alanı eklenecek.
 - [ ] En sevilen ürünler veya önerilenler alanı eklenecek.
 - [ ] El yapımı hissini anlatan kısa içerik alanı eklenecek.
