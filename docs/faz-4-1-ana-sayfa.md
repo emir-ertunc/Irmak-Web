@@ -23,6 +23,9 @@ Bağlantılar:
 
 - [x] Ana sayfa ilk ekranı pembe ağırlıklı, çiçekli ve canlı bir hero düzenine çevrildi.
 - [x] Dekoratif çiçekler `transform` ve `opacity` temelli animasyonlarla hareketlendirildi.
+- [x] Çiçek süzülmeleri ayrı süre ve yön değerleriyle daha doğal hale getirildi.
+- [x] Dekoratif hareket katmanı `contain`, `will-change` ve GPU dostu transform kurallarıyla izole edildi.
+- [x] Mobilde dekoratif çiçek yoğunluğu azaltılarak performans ve okunurluk korundu.
 - [x] Giriş animasyonları metin, görsel önizleme ve ürün şeridi için ayrı katmanlara ayrıldı.
 - [x] İlk ekranda ürün kartlarından bir kısmı görünür bırakılarak vitrine geçiş hissi korundu.
 - [x] Görsel önizleme alanında figür, küpe ve hediye hissini veren neşeli parçalar kullanıldı.

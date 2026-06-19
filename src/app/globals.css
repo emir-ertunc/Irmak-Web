@@ -81,37 +81,50 @@ body {
   mask-image: linear-gradient(to bottom, #000 0%, transparent 92%);
 }
 
+.home-motion-layer {
+  contain: layout paint;
+  overflow: hidden;
+}
+
 .home-floating-petal {
   color: var(--rose);
   background: rgba(255, 255, 255, 0.66);
   box-shadow: 0 10px 30px rgba(232, 93, 143, 0.12);
   opacity: 0.72;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
   animation: home-petal-float 6.4s var(--ease-standard) infinite;
 }
 
 .home-floating-petal:nth-child(2n) {
   color: var(--coral);
-  animation-duration: 7.2s;
 }
 
 .home-floating-petal:nth-child(3n) {
   color: var(--lavender);
-  animation-duration: 8s;
 }
 
 .home-copy-enter {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
   animation: home-enter-up 640ms var(--ease-bounce) both;
 }
 
 .home-visual-enter {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
   animation: home-enter-pop 760ms var(--ease-bounce) 120ms both;
 }
 
 .home-strip-enter {
+  backface-visibility: hidden;
+  will-change: transform, opacity;
   animation: home-enter-up 760ms var(--ease-bounce) 180ms both;
 }
 
 .home-craft-scene {
+  contain: paint;
   background-image:
     linear-gradient(
       160deg,
@@ -137,10 +150,14 @@ body {
 }
 
 .home-craft-flower {
+  backface-visibility: hidden;
+  will-change: transform;
   animation: home-soft-spin 12s linear infinite;
 }
 
 .home-craft-piece {
+  backface-visibility: hidden;
+  will-change: transform;
   animation: home-gentle-bounce 4.8s var(--ease-standard) infinite;
 }
 
@@ -155,6 +172,10 @@ body {
 @media (max-width: 640px) {
   .home-craft-scene {
     min-height: 22rem;
+  }
+
+  .home-floating-petal:nth-child(n + 5) {
+    display: none;
   }
 
   .home-craft-piece-large {
@@ -199,11 +220,14 @@ body {
 @keyframes home-petal-float {
   0%,
   100% {
+    opacity: 0.58;
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
 
   50% {
-    transform: translate3d(10px, -18px, 0) rotate(9deg);
+    opacity: 0.86;
+    transform: translate3d(var(--petal-x), var(--petal-y), 0)
+      rotate(var(--petal-rotate));
   }
 }
 

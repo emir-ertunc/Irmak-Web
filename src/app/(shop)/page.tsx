@@ -1,20 +1,78 @@
+import type { CSSProperties } from "react";
 import { Flower2, Heart, ShoppingBag, Sparkles } from "lucide-react";
 import { ProductCard } from "@/components/shop/product-card";
 import { LinkButton } from "@/components/ui/button";
 import { previewProducts } from "@/lib/catalog/preview-products";
 
 const petalLayer = [
-  { className: "left-[8%] top-[14%]", delay: "0ms", size: "size-9" },
-  { className: "left-[18%] top-[68%]", delay: "650ms", size: "size-6" },
-  { className: "left-[42%] top-[10%]", delay: "1200ms", size: "size-7" },
-  { className: "left-[61%] top-[74%]", delay: "350ms", size: "size-8" },
-  { className: "left-[78%] top-[16%]", delay: "900ms", size: "size-6" },
-  { className: "left-[88%] top-[56%]", delay: "1450ms", size: "size-9" }
+  {
+    className: "left-[8%] top-[14%]",
+    delay: "0ms",
+    duration: "6.4s",
+    rotate: "9deg",
+    size: "size-9",
+    x: "10px",
+    y: "-18px"
+  },
+  {
+    className: "left-[18%] top-[68%]",
+    delay: "650ms",
+    duration: "7.1s",
+    rotate: "-7deg",
+    size: "size-6",
+    x: "-8px",
+    y: "-14px"
+  },
+  {
+    className: "left-[42%] top-[10%]",
+    delay: "1200ms",
+    duration: "7.8s",
+    rotate: "12deg",
+    size: "size-7",
+    x: "12px",
+    y: "-20px"
+  },
+  {
+    className: "left-[61%] top-[74%]",
+    delay: "350ms",
+    duration: "6.9s",
+    rotate: "-10deg",
+    size: "size-8",
+    x: "-10px",
+    y: "-16px"
+  },
+  {
+    className: "left-[78%] top-[16%]",
+    delay: "900ms",
+    duration: "7.4s",
+    rotate: "8deg",
+    size: "size-6",
+    x: "9px",
+    y: "-15px"
+  },
+  {
+    className: "left-[88%] top-[56%]",
+    delay: "1450ms",
+    duration: "8s",
+    rotate: "-12deg",
+    size: "size-9",
+    x: "-12px",
+    y: "-19px"
+  }
 ];
+
+type PetalStyle = CSSProperties & {
+  "--petal-rotate": string;
+  "--petal-x": string;
+  "--petal-y": string;
+};
 
 function FloatingPetals() {
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+    <div
+      aria-hidden="true"
+      className="home-motion-layer pointer-events-none absolute inset-0"
+    >
       {petalLayer.map((petal, index) => (
         <span
           className={[
@@ -23,7 +81,15 @@ function FloatingPetals() {
             petal.className
           ].join(" ")}
           key={index}
-          style={{ animationDelay: petal.delay }}
+          style={
+            {
+              "--petal-rotate": petal.rotate,
+              "--petal-x": petal.x,
+              "--petal-y": petal.y,
+              animationDelay: petal.delay,
+              animationDuration: petal.duration
+            } as PetalStyle
+          }
         >
           <Flower2 size={index % 2 === 0 ? 18 : 14} />
         </span>
