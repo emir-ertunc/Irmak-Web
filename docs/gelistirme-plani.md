@@ -200,7 +200,7 @@ Bağlantılar:
 - [x] İlk ekran pembe, çiçekli, cıvıl cıvıl ve bol hareketli görsel düzenle uygulanır.
 - [x] İlk ekranda performanslı çiçek süzülmesi veya neşeli dekoratif giriş hareketi eklenir.
 - [x] Öne çıkan koleksiyon alanı eklenir.
-- [ ] Yeni ürünler alanı eklenir.
+- [x] Yeni ürünler alanı eklenir.
 - [ ] En sevilen ürünler veya önerilenler alanı eklenir.
 - [ ] Markanın el yapımı hissini anlatan kısa içerik alanı eklenir.
 

@@ -178,6 +178,19 @@ body {
   transform: translate3d(0, -4px, 0);
 }
 
+.home-new-product-card {
+  transform: translate3d(0, 0, 0);
+}
+
+.home-new-product-card:hover {
+  box-shadow: 0 18px 48px rgba(255, 138, 122, 0.14);
+  transform: translate3d(0, -4px, 0);
+}
+
+.home-new-product-spark {
+  backface-visibility: hidden;
+}
+
 @media (max-width: 640px) {
   .home-craft-scene {
     min-height: 22rem;

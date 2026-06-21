@@ -99,6 +99,11 @@ const featuredCollections = [
   }
 ];
 
+const newProductHighlights = previewProducts.map((product, index) => ({
+  ...product,
+  freshness: ["Yeni kalıp", "Yeni figür", "Yeni aksesuar"][index] ?? "Yeni"
+}));
+
 type PetalStyle = CSSProperties & {
   "--petal-rotate": string;
   "--petal-x": string;
@@ -241,6 +246,77 @@ function FeaturedCollections() {
   );
 }
 
+function NewProducts() {
+  return (
+    <section
+      className="bg-[#FFF4A8]/35 px-6 py-14 sm:px-10 sm:py-16"
+      id="yeni-urunler"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-3 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F]">
+              <Flower2 aria-hidden="true" size={16} />
+              Yeni ürünler
+            </p>
+            <h2 className="max-w-2xl text-3xl font-black leading-tight text-[#3F1D2B] sm:text-4xl">
+              Tezgaha yeni gelen tatlı parçalar
+            </h2>
+          </div>
+          <LinkButton
+            href="/urunler"
+            icon={<Sparkles aria-hidden="true" size={17} />}
+            variant="secondary"
+          >
+            Yeni Gelenleri Gör
+          </LinkButton>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {newProductHighlights.map((product) => (
+            <Link
+              className="home-new-product-card group overflow-hidden rounded-2xl border border-white/75 bg-white/80 shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#E85D8F]"
+              href={`/urunler/${product.slug}`}
+              key={product.slug}
+            >
+              <div
+                className={`relative min-h-48 bg-gradient-to-br ${product.palette}`}
+              >
+                <span className="absolute left-5 top-5 rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#E85D8F] shadow-sm">
+                  {product.freshness}
+                </span>
+                <span className="home-new-product-spark absolute bottom-5 right-5 grid size-14 place-items-center rounded-full bg-white/80 text-[#E85D8F] shadow-lg transition group-hover:-translate-y-1 group-hover:rotate-6">
+                  <Sparkles aria-hidden="true" size={24} />
+                </span>
+              </div>
+              <div className="p-5">
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <span className="text-xs font-black uppercase text-[#E85D8F]">
+                    {product.category}
+                  </span>
+                  <span className="text-sm font-bold text-[#5B3343]">
+                    {product.price}
+                  </span>
+                </div>
+                <h3 className="text-xl font-black text-[#3F1D2B]">
+                  {product.name}
+                </h3>
+                <p className="mt-2 min-h-12 text-sm leading-6 text-[#5B3343]">
+                  {product.description}
+                </p>
+                <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F] transition group-hover:translate-x-1">
+                  Detaya Bak
+                  <ArrowRight aria-hidden="true" size={16} />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
@@ -292,6 +368,7 @@ export default function HomePage() {
         </div>
       </section>
       <FeaturedCollections />
+      <NewProducts />
     </main>
   );
 }
