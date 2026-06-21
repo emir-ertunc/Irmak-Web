@@ -202,7 +202,7 @@ Bağlantılar:
 - [x] Öne çıkan koleksiyon alanı eklenir.
 - [x] Yeni ürünler alanı eklenir.
 - [x] En sevilen ürünler veya önerilenler alanı eklenir.
-- [ ] Markanın el yapımı hissini anlatan kısa içerik alanı eklenir.
+- [x] Markanın el yapımı hissini anlatan kısa içerik alanı eklenir.
 
 ### 4.2 Katalog
 

@@ -17,7 +17,7 @@ Bağlantılar:
 - [x] Öne çıkan koleksiyon alanı eklendi.
 - [x] Yeni ürünler alanı eklendi.
 - [x] En sevilen ürünler veya önerilenler alanı eklendi.
-- [ ] El yapımı hissini anlatan kısa içerik alanı sonraki ana sayfa adımında ele alınacak.
+- [x] El yapımı hissini anlatan kısa içerik alanı eklendi.
 
 ## Uygulama Notları
 
@@ -35,6 +35,8 @@ Bağlantılar:
 - [x] Yeni ürün kartları canlı renk geçişleri ve hafif hover hareketiyle hazırlandı.
 - [x] Önerilenler alanı bir büyük öneri ve iki destek önerisiyle eklendi.
 - [x] Önerilen ürün kartları ürün detay sayfalarına yönlenecek şekilde hazırlandı.
+- [x] Markanın el yapımı hissini anlatan kısa içerik alanı eklendi.
+- [x] El emeği anlatımı üç kısa değer kartıyla desteklendi.
 - [x] Hareket azaltma tercihi mevcut global kuralla desteklenmeye devam eder.
 
 ## Değişen Dosyalar
@@ -57,4 +59,4 @@ Bağlantılar:
 - [x] Öne çıkan koleksiyon alanı eklendi.
 - [x] Yeni ürünler alanı eklendi.
 - [x] En sevilen ürünler veya önerilenler alanı eklendi.
-- [ ] El yapımı hissini anlatan kısa içerik alanı eklenecek.
+- [x] El yapımı hissini anlatan kısa içerik alanı eklendi.

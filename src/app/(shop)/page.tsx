@@ -427,6 +427,73 @@ function RecommendedProducts() {
   );
 }
 
+function HandmadeStory() {
+  return (
+    <section
+      className="bg-[#FCE7F0]/65 px-6 py-14 sm:px-10 sm:py-16"
+      id="el-yapimi-hikaye"
+    >
+      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <p className="mb-3 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F]">
+            <Flower2 aria-hidden="true" size={16} />
+            El emeği hissi
+          </p>
+          <h2 className="max-w-2xl text-3xl font-black leading-tight text-[#3F1D2B] sm:text-4xl">
+            Her küçük parça elde şekillenen bir neşe taşıyor
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#5B3343] sm:text-lg">
+            Irmak&apos;ın Minik Atölyesi; pembe tonları, çiçek detayları ve
+            minik sürprizleriyle tek tek hazırlanmış aksesuarların sıcaklığını
+            hissettirmek için kuruldu. Her ürün fikri küçük bir çizim, yumuşak
+            bir renk seçimi ve hediye ederken yüz güldürecek bir detay
+            düşüncesiyle başlıyor.
+          </p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              icon: Flower2,
+              label: "Tek tek şekillenir",
+              text: "Figür ve aksesuar fikirleri küçük detaylara dikkat edilerek hazırlanır."
+            },
+            {
+              icon: Sparkles,
+              label: "Neşeli renk seçimi",
+              text: "Pembe, mint, lavanta ve limon tonları canlı ama yumuşak bir denge kurar."
+            },
+            {
+              icon: Gift,
+              label: "Hediye hissi",
+              text: "Her parça minik bir mutluluk gibi paketlenmeye uygun düşünülür."
+            }
+          ].map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                className="home-story-card rounded-2xl border border-white/75 bg-white/75 p-5 shadow-sm"
+                key={item.label}
+              >
+                <span className="grid size-12 place-items-center rounded-full bg-[#FFD6E7] text-[#E85D8F] shadow-sm">
+                  <Icon aria-hidden="true" size={22} />
+                </span>
+                <h3 className="mt-5 text-lg font-black text-[#3F1D2B]">
+                  {item.label}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#5B3343]">
+                  {item.text}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
@@ -480,6 +547,7 @@ export default function HomePage() {
       <FeaturedCollections />
       <NewProducts />
       <RecommendedProducts />
+      <HandmadeStory />
     </main>
   );
 }
