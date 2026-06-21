@@ -16,7 +16,7 @@ Bağlantılar:
 - [x] İlk ekranda performanslı çiçek süzülmesi ve dekoratif giriş hareketi eklendi.
 - [x] Öne çıkan koleksiyon alanı eklendi.
 - [x] Yeni ürünler alanı eklendi.
-- [ ] En sevilen ürünler veya önerilenler alanı sonraki ana sayfa adımında ele alınacak.
+- [x] En sevilen ürünler veya önerilenler alanı eklendi.
 - [ ] El yapımı hissini anlatan kısa içerik alanı sonraki ana sayfa adımında ele alınacak.
 
 ## Uygulama Notları
@@ -33,6 +33,8 @@ Bağlantılar:
 - [x] Koleksiyon kartları katalog rotasına yönlenecek şekilde hazırlandı.
 - [x] Yeni ürünler alanı ürün detay sayfalarına giden üç kartla eklendi.
 - [x] Yeni ürün kartları canlı renk geçişleri ve hafif hover hareketiyle hazırlandı.
+- [x] Önerilenler alanı bir büyük öneri ve iki destek önerisiyle eklendi.
+- [x] Önerilen ürün kartları ürün detay sayfalarına yönlenecek şekilde hazırlandı.
 - [x] Hareket azaltma tercihi mevcut global kuralla desteklenmeye devam eder.
 
 ## Değişen Dosyalar
@@ -54,5 +56,5 @@ Bağlantılar:
 
 - [x] Öne çıkan koleksiyon alanı eklendi.
 - [x] Yeni ürünler alanı eklendi.
-- [ ] En sevilen ürünler veya önerilenler alanı eklenecek.
+- [x] En sevilen ürünler veya önerilenler alanı eklendi.
 - [ ] El yapımı hissini anlatan kısa içerik alanı eklenecek.

@@ -104,6 +104,27 @@ const newProductHighlights = previewProducts.map((product, index) => ({
   freshness: ["Yeni kalıp", "Yeni figür", "Yeni aksesuar"][index] ?? "Yeni"
 }));
 
+const recommendedProducts = [
+  {
+    ...previewProducts[0],
+    note: "Hediye seçimi",
+    reason:
+      "Kalp formu ve pembe tonu sayesinde ilk hediye önerisi olarak öne çıkıyor."
+  },
+  {
+    ...previewProducts[2],
+    note: "Günlük kullanım",
+    reason:
+      "Çantaya, anahtara veya küçük paketlere neşeli bir detay eklemek için ideal."
+  },
+  {
+    ...previewProducts[1],
+    note: "Masa süsü",
+    reason:
+      "Minik figür sevenler için tatlı, renkli ve dikkat çeken bir vitrin parçası."
+  }
+];
+
 type PetalStyle = CSSProperties & {
   "--petal-rotate": string;
   "--petal-x": string;
@@ -317,6 +338,95 @@ function NewProducts() {
   );
 }
 
+function RecommendedProducts() {
+  return (
+    <section className="px-6 py-14 sm:px-10 sm:py-16" id="onerilenler">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-3 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F]">
+              <Heart aria-hidden="true" size={16} />
+              Atölyeden öneriler
+            </p>
+            <h2 className="max-w-2xl text-3xl font-black leading-tight text-[#3F1D2B] sm:text-4xl">
+              En çok sevilecek tatlı seçimler
+            </h2>
+          </div>
+          <LinkButton
+            href="/urunler"
+            icon={<ArrowRight aria-hidden="true" size={17} />}
+            variant="secondary"
+          >
+            Ürünleri İncele
+          </LinkButton>
+        </div>
+
+        <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+          <Link
+            className="home-recommended-feature group overflow-hidden rounded-2xl border border-white/75 bg-white/80 shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#E85D8F]"
+            href={`/urunler/${recommendedProducts[0].slug}`}
+          >
+            <div
+              className={`relative min-h-64 bg-gradient-to-br ${recommendedProducts[0].palette}`}
+            >
+              <span className="absolute left-5 top-5 rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#E85D8F] shadow-sm">
+                En sevilen öneri
+              </span>
+              <span className="absolute bottom-5 right-5 grid size-20 place-items-center rounded-full bg-white/80 text-[#E85D8F] shadow-lg transition group-hover:-translate-y-1 group-hover:rotate-6">
+                <Heart aria-hidden="true" size={34} />
+              </span>
+            </div>
+            <div className="p-5 sm:p-6">
+              <p className="text-xs font-black uppercase text-[#E85D8F]">
+                {recommendedProducts[0].note}
+              </p>
+              <h3 className="mt-3 text-2xl font-black text-[#3F1D2B]">
+                {recommendedProducts[0].name}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-[#5B3343]">
+                {recommendedProducts[0].reason}
+              </p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F] transition group-hover:translate-x-1">
+                Detaya Bak
+                <ArrowRight aria-hidden="true" size={16} />
+              </span>
+            </div>
+          </Link>
+
+          <div className="grid gap-4">
+            {recommendedProducts.slice(1).map((product) => (
+              <Link
+                className="home-recommended-row group grid gap-4 rounded-2xl border border-white/75 bg-white/80 p-4 shadow-sm outline-none transition focus-visible:ring-2 focus-visible:ring-[#E85D8F] sm:grid-cols-[8rem_1fr]"
+                href={`/urunler/${product.slug}`}
+                key={product.slug}
+              >
+                <div
+                  className={`min-h-32 rounded-xl bg-gradient-to-br ${product.palette}`}
+                />
+                <div className="flex flex-col justify-center">
+                  <p className="text-xs font-black uppercase text-[#E85D8F]">
+                    {product.note}
+                  </p>
+                  <h3 className="mt-2 text-xl font-black text-[#3F1D2B]">
+                    {product.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[#5B3343]">
+                    {product.reason}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[#E85D8F] transition group-hover:translate-x-1">
+                    İncele
+                    <ArrowRight aria-hidden="true" size={16} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
@@ -369,6 +479,7 @@ export default function HomePage() {
       </section>
       <FeaturedCollections />
       <NewProducts />
+      <RecommendedProducts />
     </main>
   );
 }

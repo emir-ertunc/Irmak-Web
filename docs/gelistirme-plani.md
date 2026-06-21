@@ -201,7 +201,7 @@ Bağlantılar:
 - [x] İlk ekranda performanslı çiçek süzülmesi veya neşeli dekoratif giriş hareketi eklenir.
 - [x] Öne çıkan koleksiyon alanı eklenir.
 - [x] Yeni ürünler alanı eklenir.
-- [ ] En sevilen ürünler veya önerilenler alanı eklenir.
+- [x] En sevilen ürünler veya önerilenler alanı eklenir.
 - [ ] Markanın el yapımı hissini anlatan kısa içerik alanı eklenir.
 
 ### 4.2 Katalog
