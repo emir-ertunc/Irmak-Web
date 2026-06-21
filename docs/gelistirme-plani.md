@@ -206,7 +206,9 @@ Bağlantılar:
 
 ### 4.2 Katalog
 
-- [ ] Ürün listeleme ekranı yapılır.
+Çıktı: [Faz 4.2 Katalog](faz-4-2-katalog.md)
+
+- [x] Ürün listeleme ekranı yapılır.
 - [ ] Kategori filtresi eklenir.
 - [ ] Fiyat aralığı filtresi eklenir.
 - [ ] Stok durumu filtresi eklenir.
