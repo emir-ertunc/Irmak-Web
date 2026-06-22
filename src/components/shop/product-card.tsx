@@ -13,11 +13,14 @@ export function ProductCard({ product }: { product: PreviewProduct }) {
       <div className="p-5">
         <div className="mb-3 flex items-center justify-between gap-3">
           <Badge>{product.category}</Badge>
-          <span className="text-sm font-semibold text-[#5B3343]">
+          <span className="shrink-0 text-sm font-semibold text-[#5B3343]">
             {product.price}
           </span>
         </div>
         <h2 className="text-xl font-bold text-[#3F1D2B]">{product.name}</h2>
+        <p className="mt-2 inline-flex rounded-full bg-[#ECFFF5] px-3 py-1 text-xs font-black text-[#23895C]">
+          {product.stockLabel}
+        </p>
         <p className="mt-2 text-sm leading-6 text-[#5B3343]">
           {product.description}
         </p>

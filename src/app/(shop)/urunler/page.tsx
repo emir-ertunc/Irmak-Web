@@ -34,12 +34,21 @@ const priceFilters = [
   { max: undefined, min: 300, slug: "300-plus", title: "₺300+" }
 ];
 
+const stockFilters = [
+  { slug: "tum", status: undefined, title: "Tüm stoklar" },
+  { slug: "stokta", status: "in-stock", title: "Stokta" },
+  { slug: "az-kaldi", status: "low-stock", title: "Az kaldı" },
+  { slug: "hazirlaniyor", status: "made-to-order", title: "Hazırlanıyor" }
+];
+
 function buildCatalogHref({
   category,
-  price
+  price,
+  stock
 }: {
   category: string;
   price: string;
+  stock: string;
 }) {
   const params = new URLSearchParams();
 
@@ -49,6 +58,10 @@ function buildCatalogHref({
 
   if (price !== "tum") {
     params.set("fiyat", price);
+  }
+
+  if (stock !== "tum") {
+    params.set("stok", stock);
   }
 
   const query = params.toString();
@@ -78,6 +91,16 @@ function normalizePrice(value?: string | string[]) {
   return priceFilters.some((filter) => filter.slug === price) ? price : "tum";
 }
 
+function normalizeStock(value?: string | string[]) {
+  const stock = Array.isArray(value) ? value[0] : value;
+
+  if (!stock) {
+    return "tum";
+  }
+
+  return stockFilters.some((filter) => filter.slug === stock) ? stock : "tum";
+}
+
 function normalizeProductCategory(category: string) {
   return category
     .toLocaleLowerCase("tr-TR")
@@ -93,6 +116,7 @@ type CatalogPageProps = {
   searchParams?: Promise<{
     fiyat?: string | string[];
     kategori?: string | string[];
+    stok?: string | string[];
   }>;
 };
 
@@ -100,6 +124,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
   const params = await searchParams;
   const activeCategory = normalizeCategory(params?.kategori);
   const activePrice = normalizePrice(params?.fiyat);
+  const activeStock = normalizeStock(params?.stok);
   const activeCategoryLabel =
     categoryFilters.find((filter) => filter.slug === activeCategory)?.title ??
     "Tümü";
@@ -107,6 +132,10 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
     priceFilters.find((filter) => filter.slug === activePrice) ??
     priceFilters[0];
   const activePriceLabel = activePriceFilter.title;
+  const activeStockFilter =
+    stockFilters.find((filter) => filter.slug === activeStock) ??
+    stockFilters[0];
+  const activeStockLabel = activeStockFilter.title;
   const visibleProducts = previewProducts.filter((product) => {
     const matchesCategory =
       activeCategory === "tum" ||
@@ -117,13 +146,17 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
     const matchesMax =
       activePriceFilter.max === undefined ||
       product.priceAmount <= activePriceFilter.max;
+    const matchesStock =
+      activeStockFilter.status === undefined ||
+      product.stockStatus === activeStockFilter.status;
 
-    return matchesCategory && matchesMin && matchesMax;
+    return matchesCategory && matchesMin && matchesMax && matchesStock;
   });
   const catalogHighlights = [
     { label: "Gösterilen", value: visibleProducts.length.toString() },
     { label: "Kategori", value: activeCategoryLabel },
-    { label: "Fiyat", value: activePriceLabel }
+    { label: "Fiyat", value: activePriceLabel },
+    { label: "Stok", value: activeStockLabel }
   ];
 
   return (
@@ -142,14 +175,14 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
               </h1>
               <p className="mt-5 w-full max-w-2xl break-words text-base leading-7 text-[#5B3343] sm:text-lg">
                 Küpe, figür ve aksesuar taslakları tek yerde listelenir.
-                Kategori ve fiyat aralığı filtreleriyle vitrindeki parçalar
-                hızlıca ayrılır; sıralama ve diğer filtreler sonraki 4.2
-                adımlarında eklenecek.
+                Kategori, fiyat aralığı ve stok durumu filtreleriyle vitrindeki
+                parçalar hızlıca ayrılır; sıralama ve diğer filtreler sonraki
+                4.2 adımlarında eklenecek.
               </p>
             </div>
 
             <div className="w-full max-w-full min-w-0 overflow-hidden rounded-2xl border border-white/75 bg-white/75 p-5 shadow-sm">
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {catalogHighlights.map((item) => (
                   <div
                     className="min-w-0 rounded-xl bg-[#FFF8F2] p-3 text-center"
@@ -184,7 +217,8 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                 className="group rounded-2xl border border-white/75 bg-white/75 p-5 shadow-sm outline-none transition hover:-translate-y-1 hover:border-[#F78FB3] hover:shadow-md focus-visible:ring-2 focus-visible:ring-[#E85D8F] aria-[current=page]:border-[#E85D8F] aria-[current=page]:bg-[#FFF8F2]"
                 href={buildCatalogHref({
                   category: category.slug,
-                  price: activePrice
+                  price: activePrice,
+                  stock: activeStock
                 })}
                 key={category.title}
               >
@@ -215,7 +249,8 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
               </h2>
               <p className="mt-2 text-sm font-bold text-[#5B3343]">
                 {activeCategoryLabel} kategorisinde {visibleProducts.length}{" "}
-                ürün gösteriliyor. Fiyat aralığı: {activePriceLabel}.
+                ürün gösteriliyor. Fiyat aralığı: {activePriceLabel}. Stok
+                durumu: {activeStockLabel}.
               </p>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
@@ -231,7 +266,8 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                     className="rounded-full border border-[#F78FB3]/40 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E85D8F] hover:text-[#E85D8F] focus-visible:ring-2 focus-visible:ring-[#E85D8F] aria-[current=page]:border-[#E85D8F] aria-[current=page]:bg-[#E85D8F] aria-[current=page]:text-white"
                     href={buildCatalogHref({
                       category: filter.slug,
-                      price: activePrice
+                      price: activePrice,
+                      stock: activeStock
                     })}
                     key={filter.slug}
                   >
@@ -251,7 +287,29 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                     className="rounded-full border border-[#C7B8FF]/55 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#8B6FFF] hover:text-[#6F55DD] focus-visible:ring-2 focus-visible:ring-[#8B6FFF] aria-[current=page]:border-[#8B6FFF] aria-[current=page]:bg-[#8B6FFF] aria-[current=page]:text-white"
                     href={buildCatalogHref({
                       category: activeCategory,
-                      price: filter.slug
+                      price: filter.slug,
+                      stock: activeStock
+                    })}
+                    key={filter.slug}
+                  >
+                    {filter.title}
+                  </Link>
+                ))}
+              </nav>
+              <nav
+                aria-label="Stok durumu filtresi"
+                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
+              >
+                {stockFilters.map((filter) => (
+                  <Link
+                    aria-current={
+                      activeStock === filter.slug ? "page" : undefined
+                    }
+                    className="rounded-full border border-[#9BE7C0]/70 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#3BCB85] hover:text-[#23895C] focus-visible:ring-2 focus-visible:ring-[#3BCB85] aria-[current=page]:border-[#3BCB85] aria-[current=page]:bg-[#3BCB85] aria-[current=page]:text-white"
+                    href={buildCatalogHref({
+                      category: activeCategory,
+                      price: activePrice,
+                      stock: filter.slug
                     })}
                     key={filter.slug}
                   >

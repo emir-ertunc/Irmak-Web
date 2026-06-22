@@ -4,6 +4,8 @@ export type PreviewProduct = {
   category: string;
   price: string;
   priceAmount: number;
+  stockLabel: string;
+  stockStatus: "in-stock" | "low-stock" | "made-to-order";
   badge: string;
   description: string;
   palette: string;
@@ -16,6 +18,8 @@ export const previewProducts: PreviewProduct[] = [
     category: "Küpe",
     price: "₺320",
     priceAmount: 320,
+    stockLabel: "Stokta",
+    stockStatus: "in-stock",
     badge: "Çiçekli seri",
     description:
       "Pastel pembe tonlu, minik kalp detaylı neşeli bir küpe taslağı.",
@@ -27,6 +31,8 @@ export const previewProducts: PreviewProduct[] = [
     category: "Figür",
     price: "₺280",
     priceAmount: 280,
+    stockLabel: "Az kaldı",
+    stockStatus: "low-stock",
     badge: "Tatlı vitrin",
     description:
       "Çilek formundan ilham alan, masa üstü veya hediye kutusu için minik figür.",
@@ -38,6 +44,8 @@ export const previewProducts: PreviewProduct[] = [
     category: "Aksesuar",
     price: "₺220",
     priceAmount: 220,
+    stockLabel: "Hazırlanıyor",
+    stockStatus: "made-to-order",
     badge: "Yumuşak renk",
     description:
       "Papatya hissi veren, çantaya veya anahtarlığa takılabilecek canlı aksesuar.",

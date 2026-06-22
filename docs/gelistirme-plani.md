@@ -211,7 +211,7 @@ Bağlantılar:
 - [x] Ürün listeleme ekranı yapılır.
 - [x] Kategori filtresi eklenir.
 - [x] Fiyat aralığı filtresi eklenir.
-- [ ] Stok durumu filtresi eklenir.
+- [x] Stok durumu filtresi eklenir.
 - [ ] Sıralama seçenekleri eklenir.
 - [ ] Mobil filtre paneli eklenir.
 

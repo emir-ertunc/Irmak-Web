@@ -14,7 +14,7 @@ Bağlantılar:
 - [x] Ürün listeleme ekranı yapıldı.
 - [x] Kategori filtresi eklendi.
 - [x] Fiyat aralığı filtresi eklendi.
-- [ ] Stok durumu filtresi eklenecek.
+- [x] Stok durumu filtresi eklendi.
 - [ ] Sıralama seçenekleri eklenecek.
 - [ ] Mobil filtre paneli eklenecek.
 
@@ -33,6 +33,10 @@ Bağlantılar:
 - [x] Fiyat aralığı filtresi URL parametresiyle çalışacak şekilde eklendi.
 - [x] Kategori ve fiyat aralığı filtreleri birlikte kullanılacak şekilde bağlantılar korumalı hale getirildi.
 - [x] Filtre sonucu boş kalırsa güvenli boş durum metni gösterilecek şekilde düzenlendi.
+- [x] Ürün taslaklarına stok durumu alanı eklendi.
+- [x] Stok durumu filtresi URL parametresiyle çalışacak şekilde eklendi.
+- [x] Kategori, fiyat aralığı ve stok filtreleri birlikte kullanılacak şekilde bağlantılar korundu.
+- [x] Ürün kartlarında stok etiketi görünür hale getirildi.
 
 ## Değişen Dosyalar
 
@@ -52,6 +56,6 @@ Bağlantılar:
 
 - [x] Kategori filtresi eklendi.
 - [x] Fiyat aralığı filtresi eklendi.
-- [ ] Stok durumu filtresi eklenecek.
+- [x] Stok durumu filtresi eklendi.
 - [ ] Sıralama seçenekleri eklenecek.
 - [ ] Mobil filtre paneli eklenecek.
