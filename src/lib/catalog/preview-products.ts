@@ -3,6 +3,7 @@ export type PreviewProduct = {
   name: string;
   category: string;
   price: string;
+  priceAmount: number;
   badge: string;
   description: string;
   palette: string;
@@ -13,7 +14,8 @@ export const previewProducts: PreviewProduct[] = [
     slug: "pembe-kalp-kupe",
     name: "Pembe Kalp Küpe",
     category: "Küpe",
-    price: "Hazırlanıyor",
+    price: "₺320",
+    priceAmount: 320,
     badge: "Çiçekli seri",
     description:
       "Pastel pembe tonlu, minik kalp detaylı neşeli bir küpe taslağı.",
@@ -23,7 +25,8 @@ export const previewProducts: PreviewProduct[] = [
     slug: "minik-cilek-figur",
     name: "Minik Çilek Figür",
     category: "Figür",
-    price: "Hazırlanıyor",
+    price: "₺280",
+    priceAmount: 280,
     badge: "Tatlı vitrin",
     description:
       "Çilek formundan ilham alan, masa üstü veya hediye kutusu için minik figür.",
@@ -33,7 +36,8 @@ export const previewProducts: PreviewProduct[] = [
     slug: "papatya-anahtarlik",
     name: "Papatya Anahtarlık",
     category: "Aksesuar",
-    price: "Hazırlanıyor",
+    price: "₺220",
+    priceAmount: 220,
     badge: "Yumuşak renk",
     description:
       "Papatya hissi veren, çantaya veya anahtarlığa takılabilecek canlı aksesuar.",

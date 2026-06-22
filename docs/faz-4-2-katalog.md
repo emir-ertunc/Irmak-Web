@@ -13,7 +13,7 @@ Bağlantılar:
 
 - [x] Ürün listeleme ekranı yapıldı.
 - [x] Kategori filtresi eklendi.
-- [ ] Fiyat aralığı filtresi eklenecek.
+- [x] Fiyat aralığı filtresi eklendi.
 - [ ] Stok durumu filtresi eklenecek.
 - [ ] Sıralama seçenekleri eklenecek.
 - [ ] Mobil filtre paneli eklenecek.
@@ -29,6 +29,10 @@ Bağlantılar:
 - [x] Filtre rozetleri ve kategori kartları aynı filtre davranışını kullanacak şekilde düzenlendi.
 - [x] Kategoriye göre gösterilen ürün sayısı katalog özetinde ve liste başlığında görünür hale getirildi.
 - [x] Geçersiz kategori parametresi tüm ürünlere dönecek şekilde güvenli hale getirildi.
+- [x] Ürün taslaklarına fiyat aralığı filtresinin kullanacağı sayısal fiyat alanı eklendi.
+- [x] Fiyat aralığı filtresi URL parametresiyle çalışacak şekilde eklendi.
+- [x] Kategori ve fiyat aralığı filtreleri birlikte kullanılacak şekilde bağlantılar korumalı hale getirildi.
+- [x] Filtre sonucu boş kalırsa güvenli boş durum metni gösterilecek şekilde düzenlendi.
 
 ## Değişen Dosyalar
 
@@ -47,7 +51,7 @@ Bağlantılar:
 ## Faz 4.2 Sonraki Adımlar
 
 - [x] Kategori filtresi eklendi.
-- [ ] Fiyat aralığı filtresi eklenecek.
+- [x] Fiyat aralığı filtresi eklendi.
 - [ ] Stok durumu filtresi eklenecek.
 - [ ] Sıralama seçenekleri eklenecek.
 - [ ] Mobil filtre paneli eklenecek.

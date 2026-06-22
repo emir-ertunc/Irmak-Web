@@ -210,7 +210,7 @@ Bağlantılar:
 
 - [x] Ürün listeleme ekranı yapılır.
 - [x] Kategori filtresi eklenir.
-- [ ] Fiyat aralığı filtresi eklenir.
+- [x] Fiyat aralığı filtresi eklenir.
 - [ ] Stok durumu filtresi eklenir.
 - [ ] Sıralama seçenekleri eklenir.
 - [ ] Mobil filtre paneli eklenir.
