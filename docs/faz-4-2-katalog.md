@@ -12,7 +12,7 @@ Bağlantılar:
 ## Faz Durumu
 
 - [x] Ürün listeleme ekranı yapıldı.
-- [ ] Kategori filtresi eklenecek.
+- [x] Kategori filtresi eklendi.
 - [ ] Fiyat aralığı filtresi eklenecek.
 - [ ] Stok durumu filtresi eklenecek.
 - [ ] Sıralama seçenekleri eklenecek.
@@ -22,9 +22,13 @@ Bağlantılar:
 
 - [x] `/urunler` sayfası geçici katalog iskeletinden ürün listeleme ekranına çevrildi.
 - [x] Katalog başlığı, kısa açıklama, ürün/kategori özeti ve sepet bağlantısı eklendi.
-- [x] Kategori özet kartları eklendi; gerçek filtre davranışı sonraki 4.2 adımına bırakıldı.
+- [x] Kategori özet kartları eklendi ve ilgili kategori filtresine bağlandı.
 - [x] Ürün grid'i mevcut ürün kartlarıyla ayrı bir listeleme bölümü olarak düzenlendi.
 - [x] Çalışmayan kategori select'i kaldırıldı; filtreler ayrı adımlarda eklenecek.
+- [x] Kategori filtresi URL parametresiyle çalışacak şekilde eklendi.
+- [x] Filtre rozetleri ve kategori kartları aynı filtre davranışını kullanacak şekilde düzenlendi.
+- [x] Kategoriye göre gösterilen ürün sayısı katalog özetinde ve liste başlığında görünür hale getirildi.
+- [x] Geçersiz kategori parametresi tüm ürünlere dönecek şekilde güvenli hale getirildi.
 
 ## Değişen Dosyalar
 
@@ -42,7 +46,7 @@ Bağlantılar:
 
 ## Faz 4.2 Sonraki Adımlar
 
-- [ ] Kategori filtresi eklenecek.
+- [x] Kategori filtresi eklendi.
 - [ ] Fiyat aralığı filtresi eklenecek.
 - [ ] Stok durumu filtresi eklenecek.
 - [ ] Sıralama seçenekleri eklenecek.
