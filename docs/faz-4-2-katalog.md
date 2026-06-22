@@ -16,7 +16,7 @@ Bağlantılar:
 - [x] Fiyat aralığı filtresi eklendi.
 - [x] Stok durumu filtresi eklendi.
 - [x] Sıralama seçenekleri eklendi.
-- [ ] Mobil filtre paneli eklenecek.
+- [x] Mobil filtre paneli eklendi.
 
 ## Uygulama Notları
 
@@ -40,6 +40,9 @@ Bağlantılar:
 - [x] Sıralama seçenekleri URL parametresiyle çalışacak şekilde eklendi.
 - [x] Vitrin sırası, fiyat artan, fiyat azalan ve ad A-Z seçenekleri eklendi.
 - [x] Sıralama bağlantıları kategori, fiyat aralığı ve stok filtrelerini koruyacak şekilde düzenlendi.
+- [x] Mobil filtre paneli açılır bölüm olarak eklendi.
+- [x] Mobil panelde kategori, fiyat aralığı, stok ve sıralama grupları tek alanda toplandı.
+- [x] Masaüstü filtre rozetleri korunurken mobilde aynı bağlantılar panel içinden kullanılacak şekilde düzenlendi.
 
 ## Değişen Dosyalar
 
@@ -61,4 +64,4 @@ Bağlantılar:
 - [x] Fiyat aralığı filtresi eklendi.
 - [x] Stok durumu filtresi eklendi.
 - [x] Sıralama seçenekleri eklendi.
-- [ ] Mobil filtre paneli eklenecek.
+- [x] Mobil filtre paneli eklendi.

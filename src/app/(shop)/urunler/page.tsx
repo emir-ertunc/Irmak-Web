@@ -1,4 +1,10 @@
-import { ArrowRight, Flower2, ShoppingBag, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  Flower2,
+  ShoppingBag,
+  SlidersHorizontal,
+  Sparkles
+} from "lucide-react";
 import Link from "next/link";
 import { ProductCard } from "@/components/shop/product-card";
 import { LinkButton } from "@/components/ui/button";
@@ -202,6 +208,76 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
     { label: "Fiyat", value: activePriceLabel },
     { label: "Stok", value: activeStockLabel }
   ];
+  const filterGroups = [
+    {
+      ariaLabel: "Kategori filtresi",
+      itemClassName:
+        "rounded-full border border-[#F78FB3]/40 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E85D8F] hover:text-[#E85D8F] focus-visible:ring-2 focus-visible:ring-[#E85D8F] aria-[current=page]:border-[#E85D8F] aria-[current=page]:bg-[#E85D8F] aria-[current=page]:text-white",
+      links: categoryFilters.map((filter) => ({
+        href: buildCatalogHref({
+          category: filter.slug,
+          price: activePrice,
+          sort: activeSort,
+          stock: activeStock
+        }),
+        isActive: activeCategory === filter.slug,
+        slug: filter.slug,
+        title: filter.title
+      })),
+      title: "Kategori"
+    },
+    {
+      ariaLabel: "Fiyat aralığı filtresi",
+      itemClassName:
+        "rounded-full border border-[#C7B8FF]/55 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#8B6FFF] hover:text-[#6F55DD] focus-visible:ring-2 focus-visible:ring-[#8B6FFF] aria-[current=page]:border-[#8B6FFF] aria-[current=page]:bg-[#8B6FFF] aria-[current=page]:text-white",
+      links: priceFilters.map((filter) => ({
+        href: buildCatalogHref({
+          category: activeCategory,
+          price: filter.slug,
+          sort: activeSort,
+          stock: activeStock
+        }),
+        isActive: activePrice === filter.slug,
+        slug: filter.slug,
+        title: filter.title
+      })),
+      title: "Fiyat"
+    },
+    {
+      ariaLabel: "Stok durumu filtresi",
+      itemClassName:
+        "rounded-full border border-[#9BE7C0]/70 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#3BCB85] hover:text-[#23895C] focus-visible:ring-2 focus-visible:ring-[#3BCB85] aria-[current=page]:border-[#3BCB85] aria-[current=page]:bg-[#3BCB85] aria-[current=page]:text-white",
+      links: stockFilters.map((filter) => ({
+        href: buildCatalogHref({
+          category: activeCategory,
+          price: activePrice,
+          sort: activeSort,
+          stock: filter.slug
+        }),
+        isActive: activeStock === filter.slug,
+        slug: filter.slug,
+        title: filter.title
+      })),
+      title: "Stok"
+    },
+    {
+      ariaLabel: "Sıralama seçenekleri",
+      itemClassName:
+        "rounded-full border border-[#FFE66D]/80 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E0B400] hover:text-[#8A6500] focus-visible:ring-2 focus-visible:ring-[#E0B400] aria-[current=page]:border-[#E0B400] aria-[current=page]:bg-[#FFE66D] aria-[current=page]:text-[#3F1D2B]",
+      links: sortOptions.map((option) => ({
+        href: buildCatalogHref({
+          category: activeCategory,
+          price: activePrice,
+          sort: option.slug,
+          stock: activeStock
+        }),
+        isActive: activeSort === option.slug,
+        slug: option.slug,
+        title: option.title
+      })),
+      title: "Sıralama"
+    }
+  ];
 
   return (
     <main className="w-full max-w-full overflow-hidden">
@@ -219,9 +295,9 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
               </h1>
               <p className="mt-5 w-full max-w-2xl break-words text-base leading-7 text-[#5B3343] sm:text-lg">
                 Küpe, figür ve aksesuar taslakları tek yerde listelenir.
-                Kategori, fiyat aralığı ve stok durumu filtreleriyle vitrindeki
-                parçalar hızlıca ayrılır; sıralama ve diğer filtreler sonraki
-                4.2 adımlarında eklenecek.
+                Kategori, fiyat aralığı, stok durumu ve sıralama seçenekleriyle
+                vitrindeki parçalar hızlıca ayrılır; mobilde tüm seçimler tek
+                panelde toplanır.
               </p>
             </div>
 
@@ -299,94 +375,63 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
               </p>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
-              <nav
-                aria-label="Kategori filtresi"
-                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
-              >
-                {categoryFilters.map((filter) => (
-                  <Link
-                    aria-current={
-                      activeCategory === filter.slug ? "page" : undefined
-                    }
-                    className="rounded-full border border-[#F78FB3]/40 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E85D8F] hover:text-[#E85D8F] focus-visible:ring-2 focus-visible:ring-[#E85D8F] aria-[current=page]:border-[#E85D8F] aria-[current=page]:bg-[#E85D8F] aria-[current=page]:text-white"
-                    href={buildCatalogHref({
-                      category: filter.slug,
-                      price: activePrice,
-                      sort: activeSort,
-                      stock: activeStock
-                    })}
-                    key={filter.slug}
+              <details className="rounded-2xl border border-[#F78FB3]/35 bg-white/80 p-4 shadow-sm lg:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-black text-[#3F1D2B] outline-none marker:hidden focus-visible:ring-2 focus-visible:ring-[#E85D8F] [&::-webkit-details-marker]:hidden">
+                  <span className="inline-flex items-center gap-2">
+                    <SlidersHorizontal aria-hidden="true" size={17} />
+                    Filtreler
+                  </span>
+                  <span className="rounded-full bg-[#FFD6E7] px-3 py-1 text-xs text-[#E85D8F]">
+                    {visibleProducts.length} ürün
+                  </span>
+                </summary>
+                <div className="mt-4 grid gap-4">
+                  {filterGroups.map((group) => (
+                    <div className="min-w-0" key={group.ariaLabel}>
+                      <p className="mb-2 text-xs font-black uppercase text-[#E85D8F]">
+                        {group.title}
+                      </p>
+                      <nav
+                        aria-label={group.ariaLabel}
+                        className="flex max-w-full flex-wrap gap-2"
+                      >
+                        {group.links.map((link) => (
+                          <Link
+                            aria-current={link.isActive ? "page" : undefined}
+                            className={group.itemClassName}
+                            href={link.href}
+                            key={link.slug}
+                          >
+                            {link.title}
+                          </Link>
+                        ))}
+                      </nav>
+                    </div>
+                  ))}
+                </div>
+              </details>
+
+              <div className="hidden flex-col gap-3 lg:flex lg:items-end">
+                {filterGroups.map((group) => (
+                  <nav
+                    aria-label={group.ariaLabel}
+                    className="flex max-w-full flex-wrap gap-2 lg:justify-end"
+                    key={group.ariaLabel}
                   >
-                    {filter.title}
-                  </Link>
+                    {group.links.map((link) => (
+                      <Link
+                        aria-current={link.isActive ? "page" : undefined}
+                        className={group.itemClassName}
+                        href={link.href}
+                        key={link.slug}
+                      >
+                        {link.title}
+                      </Link>
+                    ))}
+                  </nav>
                 ))}
-              </nav>
-              <nav
-                aria-label="Fiyat aralığı filtresi"
-                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
-              >
-                {priceFilters.map((filter) => (
-                  <Link
-                    aria-current={
-                      activePrice === filter.slug ? "page" : undefined
-                    }
-                    className="rounded-full border border-[#C7B8FF]/55 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#8B6FFF] hover:text-[#6F55DD] focus-visible:ring-2 focus-visible:ring-[#8B6FFF] aria-[current=page]:border-[#8B6FFF] aria-[current=page]:bg-[#8B6FFF] aria-[current=page]:text-white"
-                    href={buildCatalogHref({
-                      category: activeCategory,
-                      price: filter.slug,
-                      sort: activeSort,
-                      stock: activeStock
-                    })}
-                    key={filter.slug}
-                  >
-                    {filter.title}
-                  </Link>
-                ))}
-              </nav>
-              <nav
-                aria-label="Stok durumu filtresi"
-                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
-              >
-                {stockFilters.map((filter) => (
-                  <Link
-                    aria-current={
-                      activeStock === filter.slug ? "page" : undefined
-                    }
-                    className="rounded-full border border-[#9BE7C0]/70 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#3BCB85] hover:text-[#23895C] focus-visible:ring-2 focus-visible:ring-[#3BCB85] aria-[current=page]:border-[#3BCB85] aria-[current=page]:bg-[#3BCB85] aria-[current=page]:text-white"
-                    href={buildCatalogHref({
-                      category: activeCategory,
-                      price: activePrice,
-                      sort: activeSort,
-                      stock: filter.slug
-                    })}
-                    key={filter.slug}
-                  >
-                    {filter.title}
-                  </Link>
-                ))}
-              </nav>
-              <nav
-                aria-label="Sıralama seçenekleri"
-                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
-              >
-                {sortOptions.map((option) => (
-                  <Link
-                    aria-current={
-                      activeSort === option.slug ? "page" : undefined
-                    }
-                    className="rounded-full border border-[#FFE66D]/80 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E0B400] hover:text-[#8A6500] focus-visible:ring-2 focus-visible:ring-[#E0B400] aria-[current=page]:border-[#E0B400] aria-[current=page]:bg-[#FFE66D] aria-[current=page]:text-[#3F1D2B]"
-                    href={buildCatalogHref({
-                      category: activeCategory,
-                      price: activePrice,
-                      sort: option.slug,
-                      stock: activeStock
-                    })}
-                    key={option.slug}
-                  >
-                    {option.title}
-                  </Link>
-                ))}
-              </nav>
+              </div>
+
               <Link
                 className="inline-flex items-center gap-2 text-sm font-black text-[#E85D8F] outline-none transition hover:translate-x-1 focus-visible:ring-2 focus-visible:ring-[#E85D8F] lg:self-end"
                 href="/"

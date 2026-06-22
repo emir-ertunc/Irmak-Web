@@ -213,7 +213,7 @@ Bağlantılar:
 - [x] Fiyat aralığı filtresi eklenir.
 - [x] Stok durumu filtresi eklenir.
 - [x] Sıralama seçenekleri eklenir.
-- [ ] Mobil filtre paneli eklenir.
+- [x] Mobil filtre paneli eklenir.
 
 ### 4.3 Ürün Kartları
 
