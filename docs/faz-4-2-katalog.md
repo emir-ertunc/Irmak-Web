@@ -15,7 +15,7 @@ Bağlantılar:
 - [x] Kategori filtresi eklendi.
 - [x] Fiyat aralığı filtresi eklendi.
 - [x] Stok durumu filtresi eklendi.
-- [ ] Sıralama seçenekleri eklenecek.
+- [x] Sıralama seçenekleri eklendi.
 - [ ] Mobil filtre paneli eklenecek.
 
 ## Uygulama Notları
@@ -37,6 +37,9 @@ Bağlantılar:
 - [x] Stok durumu filtresi URL parametresiyle çalışacak şekilde eklendi.
 - [x] Kategori, fiyat aralığı ve stok filtreleri birlikte kullanılacak şekilde bağlantılar korundu.
 - [x] Ürün kartlarında stok etiketi görünür hale getirildi.
+- [x] Sıralama seçenekleri URL parametresiyle çalışacak şekilde eklendi.
+- [x] Vitrin sırası, fiyat artan, fiyat azalan ve ad A-Z seçenekleri eklendi.
+- [x] Sıralama bağlantıları kategori, fiyat aralığı ve stok filtrelerini koruyacak şekilde düzenlendi.
 
 ## Değişen Dosyalar
 
@@ -57,5 +60,5 @@ Bağlantılar:
 - [x] Kategori filtresi eklendi.
 - [x] Fiyat aralığı filtresi eklendi.
 - [x] Stok durumu filtresi eklendi.
-- [ ] Sıralama seçenekleri eklenecek.
+- [x] Sıralama seçenekleri eklendi.
 - [ ] Mobil filtre paneli eklenecek.

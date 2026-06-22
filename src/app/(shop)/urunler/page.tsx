@@ -41,13 +41,22 @@ const stockFilters = [
   { slug: "hazirlaniyor", status: "made-to-order", title: "Hazırlanıyor" }
 ];
 
+const sortOptions = [
+  { slug: "vitrin", title: "Vitrin sırası" },
+  { slug: "fiyat-artan", title: "Fiyat artan" },
+  { slug: "fiyat-azalan", title: "Fiyat azalan" },
+  { slug: "ad-a-z", title: "Ad A-Z" }
+];
+
 function buildCatalogHref({
   category,
   price,
+  sort,
   stock
 }: {
   category: string;
   price: string;
+  sort: string;
   stock: string;
 }) {
   const params = new URLSearchParams();
@@ -62,6 +71,10 @@ function buildCatalogHref({
 
   if (stock !== "tum") {
     params.set("stok", stock);
+  }
+
+  if (sort !== "vitrin") {
+    params.set("sirala", sort);
   }
 
   const query = params.toString();
@@ -101,6 +114,16 @@ function normalizeStock(value?: string | string[]) {
   return stockFilters.some((filter) => filter.slug === stock) ? stock : "tum";
 }
 
+function normalizeSort(value?: string | string[]) {
+  const sort = Array.isArray(value) ? value[0] : value;
+
+  if (!sort) {
+    return "vitrin";
+  }
+
+  return sortOptions.some((option) => option.slug === sort) ? sort : "vitrin";
+}
+
 function normalizeProductCategory(category: string) {
   return category
     .toLocaleLowerCase("tr-TR")
@@ -116,6 +139,7 @@ type CatalogPageProps = {
   searchParams?: Promise<{
     fiyat?: string | string[];
     kategori?: string | string[];
+    sirala?: string | string[];
     stok?: string | string[];
   }>;
 };
@@ -125,6 +149,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
   const activeCategory = normalizeCategory(params?.kategori);
   const activePrice = normalizePrice(params?.fiyat);
   const activeStock = normalizeStock(params?.stok);
+  const activeSort = normalizeSort(params?.sirala);
   const activeCategoryLabel =
     categoryFilters.find((filter) => filter.slug === activeCategory)?.title ??
     "Tümü";
@@ -136,22 +161,41 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
     stockFilters.find((filter) => filter.slug === activeStock) ??
     stockFilters[0];
   const activeStockLabel = activeStockFilter.title;
-  const visibleProducts = previewProducts.filter((product) => {
-    const matchesCategory =
-      activeCategory === "tum" ||
-      normalizeProductCategory(product.category) === activeCategory;
-    const matchesMin =
-      activePriceFilter.min === undefined ||
-      product.priceAmount >= activePriceFilter.min;
-    const matchesMax =
-      activePriceFilter.max === undefined ||
-      product.priceAmount <= activePriceFilter.max;
-    const matchesStock =
-      activeStockFilter.status === undefined ||
-      product.stockStatus === activeStockFilter.status;
+  const activeSortLabel =
+    sortOptions.find((option) => option.slug === activeSort)?.title ??
+    sortOptions[0].title;
+  const visibleProducts = previewProducts
+    .filter((product) => {
+      const matchesCategory =
+        activeCategory === "tum" ||
+        normalizeProductCategory(product.category) === activeCategory;
+      const matchesMin =
+        activePriceFilter.min === undefined ||
+        product.priceAmount >= activePriceFilter.min;
+      const matchesMax =
+        activePriceFilter.max === undefined ||
+        product.priceAmount <= activePriceFilter.max;
+      const matchesStock =
+        activeStockFilter.status === undefined ||
+        product.stockStatus === activeStockFilter.status;
 
-    return matchesCategory && matchesMin && matchesMax && matchesStock;
-  });
+      return matchesCategory && matchesMin && matchesMax && matchesStock;
+    })
+    .sort((firstProduct, secondProduct) => {
+      if (activeSort === "fiyat-artan") {
+        return firstProduct.priceAmount - secondProduct.priceAmount;
+      }
+
+      if (activeSort === "fiyat-azalan") {
+        return secondProduct.priceAmount - firstProduct.priceAmount;
+      }
+
+      if (activeSort === "ad-a-z") {
+        return firstProduct.name.localeCompare(secondProduct.name, "tr-TR");
+      }
+
+      return 0;
+    });
   const catalogHighlights = [
     { label: "Gösterilen", value: visibleProducts.length.toString() },
     { label: "Kategori", value: activeCategoryLabel },
@@ -218,6 +262,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                 href={buildCatalogHref({
                   category: category.slug,
                   price: activePrice,
+                  sort: activeSort,
                   stock: activeStock
                 })}
                 key={category.title}
@@ -250,7 +295,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
               <p className="mt-2 text-sm font-bold text-[#5B3343]">
                 {activeCategoryLabel} kategorisinde {visibleProducts.length}{" "}
                 ürün gösteriliyor. Fiyat aralığı: {activePriceLabel}. Stok
-                durumu: {activeStockLabel}.
+                durumu: {activeStockLabel}. Sıralama: {activeSortLabel}.
               </p>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
@@ -267,6 +312,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                     href={buildCatalogHref({
                       category: filter.slug,
                       price: activePrice,
+                      sort: activeSort,
                       stock: activeStock
                     })}
                     key={filter.slug}
@@ -288,6 +334,7 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                     href={buildCatalogHref({
                       category: activeCategory,
                       price: filter.slug,
+                      sort: activeSort,
                       stock: activeStock
                     })}
                     key={filter.slug}
@@ -309,11 +356,34 @@ export default async function CatalogPage({ searchParams }: CatalogPageProps) {
                     href={buildCatalogHref({
                       category: activeCategory,
                       price: activePrice,
+                      sort: activeSort,
                       stock: filter.slug
                     })}
                     key={filter.slug}
                   >
                     {filter.title}
+                  </Link>
+                ))}
+              </nav>
+              <nav
+                aria-label="Sıralama seçenekleri"
+                className="flex max-w-full flex-wrap gap-2 lg:justify-end"
+              >
+                {sortOptions.map((option) => (
+                  <Link
+                    aria-current={
+                      activeSort === option.slug ? "page" : undefined
+                    }
+                    className="rounded-full border border-[#FFE66D]/80 bg-white/80 px-4 py-2 text-sm font-black text-[#5B3343] outline-none transition hover:-translate-y-0.5 hover:border-[#E0B400] hover:text-[#8A6500] focus-visible:ring-2 focus-visible:ring-[#E0B400] aria-[current=page]:border-[#E0B400] aria-[current=page]:bg-[#FFE66D] aria-[current=page]:text-[#3F1D2B]"
+                    href={buildCatalogHref({
+                      category: activeCategory,
+                      price: activePrice,
+                      sort: option.slug,
+                      stock: activeStock
+                    })}
+                    key={option.slug}
+                  >
+                    {option.title}
                   </Link>
                 ))}
               </nav>
